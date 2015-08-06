@@ -809,7 +809,30 @@ The flip side of the Rule of Least Surprise is to avoid making things superficia
  
  -- Henry Spencer
 
-# Rule of Silence: When a program has nothing surprising to say, it should say nothing.
+
+
+
+
+
+
+
+
+
+    > Silence
+
+      When a program has nothing surprising to say, it should say nothing.
+
+
+
+
+
+
+
+
+
+
+
+
 
 One of Unix's oldest and most persistent design rules is that when a program has nothing interesting or surprising to say, it should shut up. Well-behaved Unix programs do their jobs unobtrusively, with a minimum of fuss and bother. Silence is golden.
 
@@ -836,6 +859,10 @@ Well-designed programs treat the user's attention and concentration as a preciou
       Repair what you can — but when you must fail,
       fail noisily and as soon as possible.
 
+
+
+      "Be liberal in what you accept, and conservative in what you send”
+        - Postel
 
 
 
@@ -932,7 +959,7 @@ In the Unix tradition, code generators are heavily used to automate error-prone 
 
     > Optimization
 
-    Prototype before polishing. Get it working before you optimize it.
+      Prototype before polishing. Get it working before you optimize it.
 
 
 
@@ -1005,7 +1032,7 @@ One of my most productive days was throwing away 1000 lines of code.
 
     > Diversity
 
-    Distrust all claims for “one true way”.
+      Distrust all claims for “one true way”.
 
 
 
