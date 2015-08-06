@@ -39,10 +39,48 @@ This is even before Node.js.
 
 Yes, this was a simpler time.
 
+
+
+
+         .88b  d88. db    db db      d888888b d888888b  .o88b. .d8888. 
+         88'YbdP`88 88    88 88      `~~88~~'   `88'   d8P  Y8 88'  YP 
+         88  88  88 88    88 88         88       88    8P      `8bo.   
+         88  88  88 88    88 88         88       88    8b        `Y8b. 
+         88  88  88 88b  d88 88booo.    88      .88.   Y8b  d8 db   8D 
+         YP  YP  YP ~Y8888P' Y88888P    YP    Y888888P  `Y88P' `8888Y' 
+                                       
+              ================================================
+                                                      
+                          ,   . , __   `   ___    ____
+                          |   | |'  `. | .'   `  (    
+                          |   | |    | | |       `--. 
+                          `._/| /    | /  `._.' \___.'
+                                                      
+
+    [Multics was] overdesigned and overbuilt and over everything.
+    It was close to unusable.
+    -Ken Thomson
+
+
+
+
+
+. Multiplexing information and computing service
+. early time share system
+
+...overdesigned and overbuilt and over everything. It was close to unusable.
+-Ken Thomson
+
+multics kernel              ~ 135 kB
+average webpage code 2014   ~ 670 kB (5x)
+jQuery                      ~ 270 kB (2x)
+
+
 It was during this time that an operating system called Unix was born
  out of the mind of a computer scientist at Bell Labs, named Ken Thompson.
 Now, before Unix came Multics. Multics was an operating system for much derided in it's day
-for being too large and complex. It's kernel contained 135kB of code,
+for being too large and complex. It's kernel contained 135kB of code
+Average webpage today loads about 5 times this much code,
  which, to put in perspective, is about half the size of the jQuery
  library today.
 
@@ -93,11 +131,9 @@ and was meant from the beginning to be simple to use and develop for.
     . Originated from Ken Thompson
       (Bell labs, Google, Plan 9, regex, grep, utf-8, go)
 
+    . Pirate's code
+
     . tl;dr: Emphasizes short, simple, clear, modular, and extensible code
-
-    . Has evolved over time, not a formal design method
-
-
 
 
 
@@ -270,23 +306,71 @@ The only way to write complex software that won't fall on its face is to hold it
 
 
 
+
 
-It is a usual technique to make a program and then to test it. But: program testing can be a very effective way to show the presence of bugs, but it is hopelessly inadequate for showing their absence. - Dijkstra
 
-The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. -Dijkstra
+             _________________________________________ 
+            / The competent programmer is fully aware \
+            | of the strictly limited size of his own |
+            | skull; therefore he approaches the      |
+            | programming task in full humility, and  |
+            | among other things he avoids clever     |
+            \ tricks like the plague. -Dijkstra       /
+             ----------------------------------------- 
+             \     /\  ___  /\
+              \   // \/   \/ \\
+                 ((    O O    ))
+                  \\ /     \ //
+                   \/  | |  \/ 
+                    |  | |  |  
+                    |  | |  |  
+                    |   o   |  
+                    | |   | |  
+                    |m|   |m|  
+
+
+
+
+
+
+
+     _________________________________ 
+    / When in doubt, use brute force. \
+    \ - Ken Thompson                  /
+     --------------------------------- 
+    \                             .       .
+     \                           / `.   .' " 
+      \                  .---.  <    > <    >  .---.
+       \                 |    \  \ - ~ ~ - /  /    |
+             _____          ..-~             ~-..-~
+            |     |   \~~~\.'                    `./~~~/
+           ---------   \__/                        \__/
+          .'  O    \     /               /       \  " 
+         (_____,    `._.'               |         }  \/~~~/
+          `----.          /       }     |        /    \__/
+                `-.      |       /      |       /      `. ,~~|
+                    ~-.__|      /_ - ~ ^|      /- _      `..-'   
+                         |     /        |     /     ~-.     `-. _  _  _
+                         |_____|        |_____|         ~ - . _ _ _ _ _>
+
+
+
+
 ---
 
-Because maintenance is so important and so expensive, write programs as if the most important communication they do is not to the computer that executes them but to the human beings who will read and maintain the source code in the future (including yourself).
 
-In the Unix tradition, the implications of this advice go beyond just commenting your code. Good Unix practice also embraces choosing your algorithms and implementations for future maintainability. Buying a small increase in performance with a large increase in the complexity and obscurity of your technique is a bad trade — not merely because complex code is more likely to harbor bugs, but also because complex code will be harder to read for future maintainers.
+. code for humans, not computers
+. not just about commenting
+. algorithm choice
+. small increase in performance vs
+  large increase in complexity
+  = usually not a good trade
+  - more likely to harbor bugs
+  - harder to read for future maintainers
 
-Code that is graceful and clear, on the other hand, is less likely to break — and more likely to be instantly comprehended by the next person to have to change it. This is important, especially when that next person might be yourself some years down the road.
+. less likely to break
+. easier to read for future you
 
- 	
-Never struggle to decipher subtle code three times. Once might be a one-shot fluke, but if you find yourself having to figure it out a second time — because the first was too long ago and you've forgotten details — it is time to comment the code so that the third time will be relatively painless.
-
- 
- -- Henry Spencer
 
 
 
@@ -414,6 +498,8 @@ On the other hand, by separating the two we make it possible to experiment with 
 
 
 
+
+
 
 
 
@@ -440,13 +526,10 @@ On the other hand, by separating the two we make it possible to experiment with 
 Notes:
 Many pressures tend to make programs more complicated (and therefore more expensive and buggy). One such pressure is technical machismo. Programmers are bright people who are (often justly) proud of their ability to handle complexity and juggle abstractions. Often they compete with their peers to see who can build the most intricate and beautiful complexities. Just as often, their ability to design outstrips their ability to implement and debug, and the result is expensive failure.
 
- 	
-The notion of “intricate and beautiful complexities” is almost an oxymoron. Unix programmers vie with each other for “simple and beautiful” honors — a point that's implicit in these rules, but is well worth making overt.
--- Doug McIlroy	 
+. could be features
+. could be attempting to use fad technique or framework 	
+. focus on realities of what custome actually needs
 
-Even more often (at least in the commercial software world) excessive complexity comes from project requirements that are based on the marketing fad of the month rather than the reality of what customers want or software can actually deliver. Many a good design has been smothered under marketing's pile of “checklist features” — features that, often, no customer will ever use. And a vicious circle operates; the competition thinks it has to compete with chrome by adding more chrome. Pretty soon, massive bloat is the industry standard and everyone is using huge, buggy programs not even their developers can love.
-
-Either way, everybody loses in the end.
 
 The only way to avoid these traps is to encourage a software culture that knows that small is beautiful, that actively resists bloat and complexity: an engineering tradition that puts a high value on simple solutions, that looks for ways to break program systems up into small cooperating pieces, and that reflexively fights attempts to gussy up programs with a lot of chrome (or, even worse, to design programs around the chrome).
 
@@ -523,6 +606,24 @@ That would be a culture a lot like Unix's.
 
 
 
+             _________________________________________ 
+            / It is a usual technique to make a       \
+            | program and then to test it. But:       |
+            | program testing can be a very effective |
+            | way to show the presence of bugs, but   |
+            | it is hopelessly inadequate for showing |
+            \ their absence. - Dijkstra               /
+             ----------------------------------------- 
+             \     /\  ___  /\
+              \   // \/   \/ \\
+                 ((    O O    ))
+                  \\ /     \ //
+                   \/  | |  \/ 
+                    |  | |  |  
+                    |  | |  |  
+                    |   o   |  
+                    | |   | |  
+                    |m|   |m|  
 
 
 
@@ -548,6 +649,10 @@ Notes:
     > Transparency
 
       Design for visibility to make inspection and debugging easier.
+
+
+
+
 
 
 
