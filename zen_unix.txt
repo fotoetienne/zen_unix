@@ -132,8 +132,6 @@ and was meant from the beginning to be simple to use and develop for.
     . Originated from Ken Thompson
       (Bell labs, Google, Plan 9, regex, grep, utf-8, go)
 
-    . Pirate's code
-
     . tl;dr: Emphasizes short, simple, clear, modular, and extensible code
 
 
@@ -159,6 +157,39 @@ The Unix philosophy (like successful folk traditions in other engineering discip
 
 Those who cannot remember the past are condemned to repeat it.
 - George Santayana The Life of Reason (1905)
+
+
+
+
+
+        Modularity
+                                            Clarity
+        Composition
+                                            Separation
+        Simplicity
+                                            Parsimony
+        Transparency
+                                            Robustness
+        Representation
+                                            Least Surprise
+        Silence
+                                            Repair
+        Economy
+                                            Generation
+        Optimization
+                                            Diversity
+        Extensibility
+        
+
+
+
+---
+Notes:
+
+. More like guidelines than actual Rules
+. Some are obvious, some are common sense, some are a bit controversial 
+
+
 
 03
     ^+xw*"""^q_  0 p" F  F _F  p^^"___jM   j  F              F
@@ -210,38 +241,6 @@ Those who cannot remember the past are condemned to repeat it.
 
 
 
-
-
-
-
-
-        Modularity
-                                            Clarity
-        Composition
-                                            Separation
-        Simplicity
-                                            Parsimony
-        Transparency
-                                            Robustness
-        Representation
-                                            Least Surprise
-        Silence
-                                            Repair
-        Economy
-                                            Generation
-        Optimization
-                                            Diversity
-        Extensibility
-
-
-
-
-
----
-Notes:
-
-. More like guidelines than actual Rules
-. Some are obvious, some are common sense, some are a bit controversial 
 
 
 04
