@@ -134,7 +134,7 @@ and was meant from the beginning to be simple to use and develop for.
 
     . tl;dr: Emphasizes short, simple, clear, modular, and extensible code
 
-
+    . relevant?
 
     [The Art of Unix Programming - Eric S Raymond]
     (http://www.catb.org/esr/writings/taoup/html/ch01s06.html)
@@ -562,6 +562,7 @@ That would be a culture a lot like Unix's.
 
 
 
+
              _____________________________________ 
             / We should confine ourselves to      \
             | intellectually manageable programs. |
@@ -583,6 +584,7 @@ That would be a culture a lot like Unix's.
 
 
 
+
 
              _________________________________________ 
             / If you want more effective programmers, \
