@@ -1,6 +1,4 @@
-# Zen and the Art of Programming Simply
-*the Unix philosophy*
----
+
 
             zzzzzzzzzzzzzzzzz    eeeeeeeeeeee    nnnn  nnnnnnnn    
             z:::::::::::::::z  ee::::::::::::ee  n:::nn::::::::nn  
@@ -17,39 +15,114 @@
                            _   _   _                   _          __ 
              __ _ _ _  __| | | |_| |_  ___   __ _ _ _| |_   ___ / _|
             / _` | ' \/ _` | |  _| ' \/ -_) / _` | '_|  _| / _ \  _|
-            \__,_|_||_\__,_|  \__|_||_\___| \__,_|_|  \__| \___/_|
-                                         _                _            _      
- _ __ _ _ ___  __ _ _ _ __ _ _ __  _ __ (_)_ _  __ _   __(_)_ __  _ __| |_  _ 
+            \__,_|_||_\__,_|  \__|_||_\___| \__,_|_|  \__| \___/_|     _
+ _ __ _ _ ___  __ _ _ _ __ _ _ __  _ __ (_)_ _  __ _   __(_)_ __  _ __| |_  _
 | '_ \ '_/ _ \/ _` | '_/ _` | '  \| '  \| | ' \/ _` | (_-< | '  \| '_ \ | || |
 | .__/_| \___/\__, |_| \__,_|_|_|_|_|_|_|_|_||_\__, | /__/_|_|_|_| .__/_|\_, |
 |_|           |___/                            |___/             |_|     |__/ 
+                                                       * The Unix Philosophy
 
-* The Unix Philosophy
+
+---
+Notes:
+
+Hi, my name is Stephen Spalding.
+I currently work with OpenTable developing back end systems that empower
+great dinning experiences.
+But today I am going to take you take back to a simpler time.
+This is 1969, when a typical computer has a thousand times
+ less memory than your phone,
+we are programming in the B language, which is the predecessor to C,
+and LSD is not yet a controlled substance.
+
+This is before the internet, long before Java.
+This is even before Node.js.
+
+Yes, this was a simpler time.
+
+It was during this time that an operating system called Unix was born
+ out of the mind of a computer scientist at Bell Labs, named Ken Thompson.
+Now, before Unix came Multics. Multics was an operating system for much derided in it's day
+for being too large and complex. It's kernel contained 135kB of code,
+ which, to put in perspective, is about half the size of the jQuery
+ library today.
+
+So Unix was meant to be much simpler.
+The name Unix is a play off of Multics.
+Multics stood for Multiplex, so they joked that Unix was uniplexed because it
+was simpler.
+Or some claim that the name Unix was suggested as a castrated Multics.
+Apparently puns have always been an important part of computer science.
+
+In any case, Unix was being developed mostly by hackers and hippies
+and was meant from the beginning to be simple to use and develop for.
+
+
+01 
+
+
+
+
+
+
+
+
+     "Does Unix have a philosophy? I thought it just had
+      a dismissive attitude and a drinking problem."
+
+                                              - L Martin
+
+
+
+
+
+
+
+
+
+
+
+
+02
+
+
+
+
+
+    > What is this Unix Philosophy?
+
+    . Originated from Ken Thompson
+      (Bell labs, Google, Plan 9, regex, grep, utf-8, go)
+
+    . Emphasizes short, simple, clear, modular, and extensible code
+
+    . Has evolved over time, not a formal design method
+
+    . Not just for Unix!
+
+
+
+
+
+
+
 
 
 ---
+Notes:
 
----
+. originated with Ken Thompson's early meditations on how to design
+  a small but capable operating system.
 
-"Does Unix have a philosophy? I thought it just had a dismissive attitude and a drinking problem."
- - L Martin
+. not a formal design method. It wasn't handed down from the high fastnesses of theoretical computer science as a way to produce theoretically perfect software. Nor is it that perennial executive's mirage, some way to magically extract innovative but reliable software on too short a deadline from unmotivated, badly managed, and underpaid programmers.
 
----
+The Unix philosophy (like successful folk traditions in other engineering disciplines) is bottom-up, not top-down. It is pragmatic and grounded in experience. It is not to be found in official methods and standards, but rather in the implicit half-reflexive knowledge, the expertise that the Unix culture transmits. It encourages a sense of proportion and skepticism — and shows both by having a sense of (often subversive) humor.
 
-# What is this Unix Philosophy
-## and why should I care?
-- Originated by Ken Thompson (Bell labs, Google, Plan 9, regex, grep, utf-8, go)
-- Emphasizes short, simple, clear, modular, and extensible code
-- Has evolved over time, not a formal design method
-- Not just for Unix!
 
-;;- just a set of guidelines
-;;- Some are recognized as best practices, some are controversial.
-;;- Those who don't know history are destined to repeat it.
-;; Edmund Burke
+Those who cannot remember the past are condemned to repeat it.
+- George Santayana The Life of Reason (1905)
 
----
-
+03
     ^+xw*"""^q_  0 p" F  F _F  p^^"___jM   j  F              F
       _,,__   q x" [  F J_ J  P  w""""_  _,"  9  _m^`"*____x"    _____
  v,,_w"   "M_ @ `, ",_!u_9__L F #  r^""^^"    f j"      "      _*"   "6_
@@ -74,109 +147,92 @@
 
 ---
 
+
 
-                  Y.                      _
-                  YiL                   .```.
-                  Yii;                .; .;;`.
-                  YY;ii._           .;`.;;;; :
-                  iiYYYYYYiiiii;;;;i` ;;::;;;;
-              _.;YYYYYYiiiiiiYYYii  .;;.   ;;;
-           .YYYYYYYYYYiiYYYYYYYYYYYYii;`  ;;;;
-         .YYYYYYY$$YYiiYY$$$$iiiYYYYYY;.ii;`..
-        :YYY$!.  TYiiYY$$$$$YYYYYYYiiYYYYiYYii.     so unix
-        Y$MM$:   :YYYYYY$!"``"4YYYYYiiiYYYYiiYY.
-     `. :MM$$b.,dYY$$Yii" :'   :YYYYllYiiYYYiYY
-  _.._ :`4MM$!YYYYYYYYYii,.__.diii$$YYYYYYYYYYY      such beautiful
-  .,._ $b`P`     "4$$$$$iiiiiiii$$$$YY$$$$$$YiY;
-     `,.`$:       :$$$$$$$$$YYYYY$$$$$$$$$YYiiYYL
-      "`;$$.    .;PPb$`.,.``T$$YY$$$$YYYYYYiiiYYU:    wow
-    ' ;$P$;;: ;;;;i$y$"!Y$$$b;$$$Y$YY$$YYYiiiYYiYY
-      $Fi$$ .. ``:iii.`-";YYYYY$$YY$$$$$YYYiiYiYYY
-      :Y$$rb ````  `_..;;i;YYY$YY$$$$$$$YYYYYYYiYY:
-       :$$$$$i;;iiiiidYYYYYYYYYY$$$$$$YYYYYYYiiYYYY.
-        `$$$$$$$YYYYYYYYYYYYY$$$$$$YYYYYYYYiiiYYYYYY
-        .i!$$$$$$YYYYYYYYY$$$$$$YYY$$YYiiiiiiYYYYYYY
-       :YYiii$$$$$$$YYYYYYY$$$$YY$$$$YYiiiiiYYYYYYi' 
 
----
 
-Write programs that do one thing and do it well.
--Doug McIlroy
 
----
-1. Modularity
 
-Write simple parts connected by clean interfaces.
 
-2. Clarity
 
-Clarity is better than cleverness.
+                 _________________________________________ 
+                / Write programs that do one thing and do \
+                \ it well. -Doug McIlroy                  /
+                 ----------------------------------------- 
+                        \   ^__^
+                         \  (oo)\_______
+                            (__)\       )\/\
+                                ||----w |
+                                ||     ||
 
-3. Composition
 
-Design programs to be connected to other programs.
 
-4. Separation
 
-Separate policy from mechanism; separate interfaces from engines.
 
-5. Simplicity
 
-Design for simplicity; add complexity only where you must.
 
-6. Parsimony
 
-Write a big program only when it is clear by demonstration that nothing else will do.
-
-7. Transparency
-
-Design for visibility to make inspection and debugging easier.
-
-8. Robustness
-
-Robustness is the child of transparency and simplicity.
-
-9. Representation
-
-Fold knowledge into data so program logic can be stupid and robust.
-
-10. Least Surprise
-
-In interface design, always do the least surprising thing.
-
-11. Silence
-
-When a program has nothing surprising to say, it should say nothing.
-
-12. Repair
-
-When you must fail, fail noisily and as soon as possible.
-
-13. Economy
-
-Programmer time is expensive; conserve it in preference to machine time.
-
-14. Generation
-
-Avoid hand-hacking; write programs to write programs when you can.
-
-15. Optimization
-
-Prototype before polishing. Get it working before you optimize it.
-
-16. Diversity
-
-Distrust all claims for “one true way”.
-
-17. Extensibility
-
-Design for the future, because it will be here sooner than you think.
-
----
 
 
 
-# Rule of Modularity: Write simple parts connected by clean interfaces. 
+
+
+
+        Modularity
+                                            Clarity
+        Composition
+                                            Separation
+        Simplicity
+                                            Parsimony
+        Transparency
+                                            Robustness
+        Representation
+                                            Least Surprise
+        Silence
+                                            Repair
+        Economy
+                                            Generation
+        Optimization
+                                            Diversity
+        Extensibility
+
+
+
+
+
+---
+Notes:
+
+. More like guidelines than actual Rules
+. Some are obvious, some are common sense, some are a bit controversial 
+
+
+04
+
+
+
+
+
+
+
+
+    > Modularity
+     
+      Write simple parts connected by clean interfaces. 
+
+      . Problems remain localized
+
+
+
+
+
+
+
+
+
+
+
+---
 
 As Brian Kernighan once observed, “Controlling complexity is the essence of computer programming” [Kernighan-Plauger]. Debugging dominates development time, and getting a working system out the door is usually less a result of brilliant design than it is of managing not to trip over your own feet too many times.
 
@@ -185,7 +241,31 @@ Assemblers, compilers, flowcharting, procedural programming, structured programm
 The only way to write complex software that won't fall on its face is to hold its global complexity down — to build it out of simple parts connected by well-defined interfaces, so that most problems are local and you can have some hope of upgrading a part without breaking the whole.
 
 
-# Rule of Clarity: Clarity is better than cleverness.
+
+
+
+
+
+
+
+
+    > Clarity
+
+     . Clarity is better than cleverness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 
 Because maintenance is so important and so expensive, write programs as if the most important communication they do is not to the computer that executes them but to the human beings who will read and maintain the source code in the future (including yourself).
 
@@ -199,11 +279,35 @@ Never struggle to decipher subtle code three times. Once might be a one-shot flu
  
  -- Henry Spencer
 
+
 
-# Rule of Composition: Design programs to be connected with other programs.
 
+
+
+
+
+
+
+
+    > Composition
+
+      Design programs to be connected with other programs.
+
+      . Simple, text-based, stream-oriented formats
+
+      . The simplicity of the text-stream interface enforces encapsulation
+
+      . Today? API first!
+
+
+
+
+
+
+
+--- 
+Notes:
 It's hard to avoid programming overcomplicated monoliths if none of your programs can talk to each other.
-
 
 Unix tradition strongly encourages writing programs that read and write simple, textual, stream-oriented, device-independent formats. Under classic Unix, as many programs as possible are written as simple filters, which take a simple text stream on input and process it into another simple text stream on output.
 
@@ -217,11 +321,30 @@ GUIs can be a very good thing. Complex binary data formats are sometimes unavoid
 
 When a serialized, protocol-like interface is not natural for the application, proper Unix design is to at least organize as many of the application primitives as possible into a library with a well-defined API. This opens up the possibility that the application can be called by linkage, or that multiple interfaces can be glued on it for different tasks.
 
-(We discuss these issues in detail in Chapter 7.)
+
+
 
 
-# Rule of Separation: Separate policy from mechanism; separate interfaces from engines.
 
+
+
+
+
+
+
+
+    > Separation
+      Separate policy from mechanism; separate interfaces from engines.
+
+
+
+
+
+
+
+
+---
+Notes:
 In our discussion of what Unix gets wrong, we observed that the designers of X made a basic decision to implement “mechanism, not policy”—to make X a generic graphics engine and leave decisions about user-interface style to toolkits and other levels of the system. We justified this by pointing out that policy and mechanism tend to mutate on different timescales, with policy changing much faster than mechanism. Fashions in the look and feel of GUI toolkits may come and go, but raster operations and compositing are forever.
 
 Thus, hardwiring policy and mechanism together has two bad effects: It makes policy rigid and harder to change in response to user requirements, and it means that trying to change policy has a strong tendency to destabilize the mechanisms.
@@ -235,8 +358,27 @@ One way to effect that separation is, for example, to write your application as 
 Another way is to separate your application into cooperating front-end and back-end processes communicating through a specialized application protocol over sockets; we discuss this kind of design in Chapter 5 and Chapter 7. The front end implements policy; the back end, mechanism. The global complexity of the pair will often be far lower than that of a single-process monolith implementing the same functions, reducing your vulnerability to bugs and lowering life-cycle costs.
 
 
-# Rule of Simplicity: Design for simplicity; add complexity only where you must.
 
+
+
+
+
+
+
+
+    > Simplicity
+     
+      Design for simplicity; add complexity only where you must.
+
+
+
+
+
+
+
+
+---
+Notes:
 Many pressures tend to make programs more complicated (and therefore more expensive and buggy). One such pressure is technical machismo. Programmers are bright people who are (often justly) proud of their ability to handle complexity and juggle abstractions. Often they compete with their peers to see who can build the most intricate and beautiful complexities. Just as often, their ability to design outstrips their ability to implement and debug, and the result is expensive failure.
 
  	
@@ -252,15 +394,59 @@ The only way to avoid these traps is to encourage a software culture that knows 
 That would be a culture a lot like Unix's.
 
 
-# Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.
 
-‘Big’ here has the sense both of large in volume of code and of internal complexity. Allowing programs to get large hurts maintainability. Because people are reluctant to throw away the visible product of lots of work, large programs invite overinvestment in approaches that are failed or suboptimal.
 
-(We'll examine the issue of the right size of software in more detail in Chapter 13.)
+
+
+
+
+
+
+    > Rule of Parsimony
+
+      Write a big program only when it is clear
+      that nothing else will do.
+
+
+
+
+
+
+
+
+
+
+
+---
+Notes:
+
+. ‘Big’ here has the sense both of large in volume of code and of internal complexity.
+. Hurts maintainability.
+. Because people are reluctant to throw away lots of work,
+   large programs invite overinvestment in approaches that are failed or suboptimal.
+
 
 
-# Rule of Transparency: Design for visibility to make inspection and debugging easier.
 
+
+
+
+
+
+
+
+    > Transparency
+
+      Design for visibility to make inspection and debugging easier.
+
+
+
+
+
+
+
+---
+Notes:
 Because debugging often occupies three-quarters or more of development time, work done early to ease debugging can be a very good investment. A particularly effective way to ease debugging is to design for transparency and discoverability.
 
 A software system is transparent when you can look at it and immediately understand what it is doing and how. It is discoverable when it has facilities for monitoring and display of internal state so that your program not only functions well but can be seen to function well.
@@ -272,7 +458,22 @@ For a program to demonstrate its own correctness, it needs to be using input and
 The objective of designing for transparency and discoverability should also encourage simple interfaces that can easily be manipulated by other programs — in particular, test and monitoring harnesses and debugging scripts.
 
 
-# Rule of Robustness: Robustness is the child of transparency and simplicity.
+
+
+
+
+
+
+
+
+    > Robustness
+
+      Robustness is the child of transparency and simplicity.
+
+"The unavoidable price of reliability is simplicity." -C.A.R. Hoare
+
+---
+Notes:
 
 Software is said to be robust when it performs well under unexpected conditions which stress the designer's assumptions, as well as under normal conditions.
 
@@ -281,7 +482,7 @@ Most software is fragile and buggy because most programs are too complicated for
 It follows that the way to make robust programs is to make their internals easy for human beings to reason about. There are two main ways to do that: transparency and simplicity.
 
  	
-For robustness, designing in tolerance for unusual or extremely bulky inputs is also important. Bearing in mind the Rule of Composition helps; input generated by other programs is notorious for stress-testing software (e.g., the original Unix C compiler reportedly needed small upgrades to cope well with Yacc output). The forms involved often seem useless to humans. For example, accepting empty lists/strings/etc., even in places where a human would seldom or never supply an empty string, avoids having to special-case such situations when generating the input mechanically.
+For robustness, designing in tolerance for unusual or extremely bulky inputs is also important.
 
  
 -- Henry Spencer	 
@@ -406,6 +607,32 @@ When you design code, organize it so future developers will be able to plug new 
 
 You'll be there in the future too, maintaining code you may have half forgotten under the press of more recent projects. When you design for the future, the sanity you save may be your own.
 
+
+
+                  Y.                      _
+                  YiL                   .```.
+                  Yii;                .; .;;`.
+                  YY;ii._           .;`.;;;; :
+                  iiYYYYYYiiiii;;;;i` ;;::;;;;
+              _.;YYYYYYiiiiiiYYYii  .;;.   ;;;
+           .YYYYYYYYYYiiYYYYYYYYYYYYii;`  ;;;;
+         .YYYYYYY$$YYiiYY$$$$iiiYYYYYY;.ii;`..
+        :YYY$!.  TYiiYY$$$$$YYYYYYYiiYYYYiYYii.     so unix
+        Y$MM$:   :YYYYYY$!"``"4YYYYYiiiYYYYiiYY.
+     `. :MM$$b.,dYY$$Yii" :'   :YYYYllYiiYYYiYY
+  _.._ :`4MM$!YYYYYYYYYii,.__.diii$$YYYYYYYYYYY      such simple
+  .,._ $b`P`     "4$$$$$iiiiiiii$$$$YY$$$$$$YiY;
+     `,.`$:       :$$$$$$$$$YYYYY$$$$$$$$$YYiiYYL
+      "`;$$.    .;PPb$`.,.``T$$YY$$$$YYYYYYiiiYYU:    wow
+    ' ;$P$;;: ;;;;i$y$"!Y$$$b;$$$Y$YY$$YYYiiiYYiYY
+      $Fi$$ .. ``:iii.`-";YYYYY$$YY$$$$$YYYiiYiYYY
+      :Y$$rb ````  `_..;;i;YYY$YY$$$$$$$YYYYYYYiYY:
+       :$$$$$i;;iiiiidYYYYYYYYYY$$$$$$YYYYYYYiiYYYY.
+        `$$$$$$$YYYYYYYYYYYYY$$$$$$YYYYYYYYiiiYYYYYY
+        .i!$$$$$$YYYYYYYYY$$$$$$YYY$$YYiiiiiiYYYYYYY
+       :YYiii$$$$$$$YYYYYYY$$$$YY$$$$YYiiiiiYYYYYYi' 
 
 
 [http://www.catb.org/esr/writings/taoup/html/ch01s06.html]
+
+
