@@ -12,15 +12,14 @@
              z::::::::::::::z e::::::::eeeeeeee    n::::n    n::::n
             z:::::::::::::::z  ee:::::::::::::e    n::::n    n::::n
             zzzzzzzzzzzzzzzzz    eeeeeeeeeeeeee    nnnnnn    nnnnnn
-                           _   _   _                   _          __ 
              __ _ _ _  __| | | |_| |_  ___   __ _ _ _| |_   ___ / _|
             / _` | ' \/ _` | |  _| ' \/ -_) / _` | '_|  _| / _ \  _|
-            \__,_|_||_\__,_|  \__|_||_\___| \__,_|_|  \__| \___/_|     _
- _ __ _ _ ___  __ _ _ _ __ _ _ __  _ __ (_)_ _  __ _   __(_)_ __  _ __| |_  _
-| '_ \ '_/ _ \/ _` | '_/ _` | '  \| '  \| | ' \/ _` | (_-< | '  \| '_ \ | || |
-| .__/_| \___/\__, |_| \__,_|_|_|_|_|_|_|_|_||_\__, | /__/_|_|_|_| .__/_|\_, |
-|_|           |___/                            |___/             |_|     |__/ 
-                                                       * The Unix Philosophy
+            \__,_|_||_\__,_|  \__|_||_\___| \__,_|_|  \__| \___/_|     
+    ___(_)_ __ ___  _ __ | | ___   ___  ___  / _| |___      ____ _ _ __ ___ 
+   / __| | '_ ` _ \| '_ \| |/ _ \ / __|/ _ \| |_| __\ \ /\ / / _` | '__/ _ \
+   \__ \ | | | | | | |_) | |  __/ \__ \ (_) |  _| |_ \ V  V / (_| | | |  __/
+   |___/_|_| |_| |_| .__/|_|\___| |___/\___/|_|  \__| \_/\_/ \__,_|_|  \___|
+                   |_|                                 * The Unix Philosophy
 
 
 ---
@@ -94,14 +93,16 @@ and was meant from the beginning to be simple to use and develop for.
     . Originated from Ken Thompson
       (Bell labs, Google, Plan 9, regex, grep, utf-8, go)
 
-    . Emphasizes short, simple, clear, modular, and extensible code
+    . tl;dr: Emphasizes short, simple, clear, modular, and extensible code
 
     . Has evolved over time, not a formal design method
 
-    . Not just for Unix!
 
 
 
+
+    [The Art of Unix Programming - Eric S Raymond]
+    (http://www.catb.org/esr/writings/taoup/html/ch01s06.html)
 
 
 
@@ -177,7 +178,6 @@ Those who cannot remember the past are condemned to repeat it.
 
 
 
-
         Modularity
                                             Clarity
         Composition
@@ -251,7 +251,7 @@ The only way to write complex software that won't fall on its face is to hold it
 
     > Clarity
 
-     . Clarity is better than cleverness.
+      Clarity is better than cleverness.
 
 
 
@@ -334,7 +334,11 @@ When a serialized, protocol-like interface is not natural for the application, p
 
 
     > Separation
+
       Separate policy from mechanism; separate interfaces from engines.
+
+
+
 
 
 
@@ -377,6 +381,9 @@ Another way is to separate your application into cooperating front-end and back-
 
 
 
+
+
+
 ---
 Notes:
 Many pressures tend to make programs more complicated (and therefore more expensive and buggy). One such pressure is technical machismo. Programmers are bright people who are (often justly) proud of their ability to handle complexity and juggle abstractions. Often they compete with their peers to see who can build the most intricate and beautiful complexities. Just as often, their ability to design outstrips their ability to implement and debug, and the result is expensive failure.
@@ -402,12 +409,13 @@ That would be a culture a lot like Unix's.
 
 
 
-    > Rule of Parsimony
+    > Parsimony
 
       Write a big program only when it is clear
       that nothing else will do.
 
-
+We should confine ourselves to intellectually manageable programs.
+-Dijkstra
 
 
 
@@ -485,17 +493,40 @@ It follows that the way to make robust programs is to make their internals easy 
 For robustness, designing in tolerance for unusual or extremely bulky inputs is also important.
 
  
--- Henry Spencer	 
-
 One very important tactic for being robust under odd inputs is to avoid having special cases in your code. Bugs often lurk in the code for handling special cases, and in the interactions among parts of the code intended to handle different special cases.
 
 We observed above that software is transparent when you can look at it and immediately see what is going on. It is simple when what is going on is uncomplicated enough for a human brain to reason about o data.
+
+
+
+
+
+
+
+
+
+
+    > Representation
+      Fold knowledge into data, so program logic can be stupid and robust.
+
+    . where you see a choice between complexity in data structures and complexity in code, choose the former.
+
+
+
+---
+Notes:
+Even the simplest procedural logic is hard for humans to verify, but quite complex data structures are fairly easy to model and reason about. To see this, compare the expressiveness and explanatory power of a diagram of (say) a fifty-node pointer tree with a flowchart of a fifty-line program. Or, compare an array initializer expressing a conversion table with an equivalent switch statement. The difference in transparency and clarity is dramatic. See Rob Pike's Rule 5.
+
+Data is more tractable than program logic. It follows that where you see a choice between complexity in data structures and complexity in code, choose the former. More: in evolving a design, you should actively seek ways to shift complexity from code to data.
 
 The Unix community did not originate this insight, but a lot of Unix code displays its influence. The C language's facility at manipulating pointers, in particular, has encouraged the use of dynamically-modified reference structures at all levels of coding from the kernel upward. Simple pointer chases in such structures frequently do duties that implementations in other languages would instead have to embody in more elaborate procedures.
 
 
 
-# Rule of Least Surprise: In interface design, always do the least surprising thing.
+
+
+> Rule of Least Surprise
+  In interface design, always do the least surprising thing.
 
 The easiest programs to use are those that demand the least new learning from the user — or, to put it another way, the easiest programs to use are those that most effectively connect to the user's pre-existing knowledge.
 
@@ -525,8 +556,17 @@ I think that the terseness of Unix programs is a central feature of the style. W
 Well-designed programs treat the user's attention and concentration as a precious and limited resource, only to be claimed when necessary.
 
 
-# Rule of Repair: Repair what you can — but when you must fail, fail noisily and as soon as possible.
 
+
+
+
+
+> Repair
+  Repair what you can — but when you must fail, fail noisily and as soon as possible.
+
+
+
+---
 Software should be transparent in the way that it fails, as well as in normal operation. It's best when software can cope with unexpected conditions by adapting to them, but the worst kinds of bugs are those in which the repair doesn't succeed and the problem quietly causes corruption that doesn't show up until much later.
 
 Therefore, write your software to cope with incorrect inputs and its own execution errors as gracefully as possible. But when it cannot, make it fail in a way that makes diagnosis of the problem as easy as possible.
@@ -633,6 +673,8 @@ You'll be there in the future too, maintaining code you may have half forgotten 
        :YYiii$$$$$$$YYYYYYY$$$$YY$$$$YYiiiiiYYYYYYi' 
 
 
-[http://www.catb.org/esr/writings/taoup/html/ch01s06.html]
+
+[The Art of Unix Programming - Eric S Raymond]
+(http://www.catb.org/esr/writings/taoup/html/ch01s06.html)
 
 
