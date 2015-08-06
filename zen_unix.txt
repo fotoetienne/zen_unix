@@ -39,6 +39,31 @@ This is even before Node.js.
 
 Yes, this was a simpler time.
 
+01 
+
+
+
+
+
+
+
+
+     "Does Unix have a philosophy? I thought it just had
+      a dismissive attitude and a drinking problem."
+
+                                              - L Martin
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -93,30 +118,6 @@ Apparently puns have always been an important part of computer science.
 
 In any case, Unix was being developed mostly by hackers and hippies
 and was meant from the beginning to be simple to use and develop for.
-
-
-01 
-
-
-
-
-
-
-
-
-     "Does Unix have a philosophy? I thought it just had
-      a dismissive attitude and a drinking problem."
-
-                                              - L Martin
-
-
-
-
-
-
-
-
-
 
 
 
