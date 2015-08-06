@@ -746,9 +746,17 @@ We observed above that software is transparent when you can look at it and immed
 
 
     > Representation
+
       Fold knowledge into data, so program logic can be stupid and robust.
 
-    . where you see a choice between complexity in data structures and complexity in code, choose the former.
+     . where you see a choice between complexity in data structures
+       and complexity in code, choose the former.
+
+
+
+
+
+
 
 
 
@@ -771,6 +779,7 @@ The Unix community did not originate this insight, but a lot of Unix code displa
 
 
     > Least Surprise
+
       In interface design, always do the least surprising thing.
 
 
@@ -823,6 +832,7 @@ Well-designed programs treat the user's attention and concentration as a preciou
 
 
     > Repair
+
       Repair what you can — but when you must fail,
       fail noisily and as soon as possible.
 
@@ -861,7 +871,8 @@ McIlroy adjures us to design for generosity rather than compensating for inadequ
 
 
 
-    > Economy:
+    > Economy
+
       Programmer time is expensive; conserve it in preference to machine time.
 
 
@@ -887,6 +898,7 @@ McIlroy adjures us to design for generosity rather than compensating for inadequ
 
 
     > Generation
+
       Avoid hand-hacking; write programs to write programs when you can.
 
 
@@ -917,8 +929,14 @@ In the Unix tradition, code generators are heavily used to automate error-prone 
 
 
 
+
     > Optimization
+
     Prototype before polishing. Get it working before you optimize it.
+
+
+
+
 
 
 
@@ -974,22 +992,63 @@ Using prototyping to learn which features you don't have to implement helps opti
 
  	
 One of my most productive days was throwing away 1000 lines of code.
-
- 
 -- Ken Thompson	 
-(We'll go into a bit more depth about related ideas in Chapter 12.)
 
 
 
 
 
-> Rule of Diversity: Distrust all claims for “one true way”.
+
+
+
+
+
+    > Diversity
+
+    Distrust all claims for “one true way”.
+
+
+
+
+
+
+
+
+
+
 
 Even the best software tools tend to be limited by the imaginations of their designers. Nobody is smart enough to optimize for everything, nor to anticipate all the uses to which their software might be put. Designing rigid, closed software that won't talk to the rest of the world is an unhealthy form of arrogance.
 
 Therefore, the Unix tradition includes a healthy mistrust of “one true way” approaches to software design or implementation. It embraces multiple languages, open extensible systems, and customization hooks everywhere.
 
-Rule of Extensibility: Design for the future, because it will be here sooner than you think.
+
+
+
+
+
+
+
+
+  
+    > Extensibility
+
+      Design for the future, because it will be here sooner than you think.
+
+
+
+
+
+
+
+
+
+
+
+
+---
+Notes:
+
+. Versioning!
 
 If it is unwise to trust other people's claims for “one true way”, it's even more foolish to believe them about your own designs. Never assume you have the final answer. Therefore, leave room for your data formats and code to grow; otherwise, you will often find that you are locked into unwise early choices because you cannot change them while maintaining backward compatibility.
 
@@ -1024,9 +1083,19 @@ You'll be there in the future too, maintaining code you may have half forgotten 
         .i!$$$$$$YYYYYYYYY$$$$$$YYY$$YYiiiiiiYYYYYYY
        :YYiii$$$$$$$YYYYYYY$$$$YY$$$$YYiiiiiYYYYYYi' 
 
+
+
+
+
+
+
 
 
 [The Art of Unix Programming - Eric S Raymond]
 (http://www.catb.org/esr/writings/taoup/html/ch01s06.html)
 
-
+[these slides]
+(https://github.com/fotoetienne/zen_unix)
+
+[me]
+(mailto:stephen.sp@lding.co)
